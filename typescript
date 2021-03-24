@@ -1,0 +1,122 @@
+Script started on 2021-03-24 13:17:29-03:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="80" LINES="24"]
+(base) ]0;samuel_assis@centurion: ~/S A M U E L/UFMG/5/OC1/Memoria-de-dados-e-cache-em-C-[01;32msamuel_assis@centurion[00m:[01;34m~/S A M U E L/UFMG/5/OC1/Memoria-de-dados-e-cache-em-C-[00m$ ./main < teste[C[C[C[C[C[C[C[9Pclear[K[K[K[K[Kscript.sh
+script.sh: comando não encontrado
+(base) ]0;samuel_assis@centurion: ~/S A M U E L/UFMG/5/OC1/Memoria-de-dados-e-cache-em-C-[01;32msamuel_assis@centurion[00m:[01;34m~/S A M U E L/UFMG/5/OC1/Memoria-de-dados-e-cache-em-C-[00m$ ./script
+bash: ./script: Arquivo ou diretório inexistente
+(base) ]0;samuel_assis@centurion: ~/S A M U E L/UFMG/5/OC1/Memoria-de-dados-e-cache-em-C-[01;32msamuel_assis@centurion[00m:[01;34m~/S A M U E L/UFMG/5/OC1/Memoria-de-dados-e-cache-em-C-[00m$ .script
+
+Comando '.script' não encontrado, você quis dizer:
+
+  comando 'script' do deb bsdutils (1:2.34-0.1ubuntu9.1)
+  comando 'escript' do deb erlang-base (1:22.2.7+dfsg-1)
+  comando 'escript' do deb erlang-base-hipe (1:22.2.7+dfsg-1)
+
+Experimente: sudo apt install <deb name>
+
+(base) ]0;samuel_assis@centurion: ~/S A M U E L/UFMG/5/OC1/Memoria-de-dados-e-cache-em-C-[01;32msamuel_assis@centurion[00m:[01;34m~/S A M U E L/UFMG/5/OC1/Memoria-de-dados-e-cache-em-C-[00m$ sh script.sh 
+[01m[KOC1_tp3.cpp:135:16:[m[K [01;35m[Kwarning: [m[Kmulti-character character constant [[01;35m[K-Wmultichar[m[K]
+  135 |     inst.str = [01;35m[K'HIT'[m[K;
+      |                [01;35m[K^~~~~[m[K
+[01m[KOC1_tp3.cpp:137:16:[m[K [01;35m[Kwarning: [m[Kmulti-character character constant [[01;35m[K-Wmultichar[m[K]
+  137 |     inst.str = [01;35m[K'MISS'[m[K;
+      |                [01;35m[K^~~~~~[m[K
+[01m[KOC1_tp3.cpp:18:16:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[K'0'[m[K’ from ‘[01m[Kchar[m[K’ to ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’}
+   18 |  string data = [01;31m[K'0'[m[K;
+      |                [01;31m[K^~~[m[K
+      |                [01;31m[K|[m[K
+      |                [01;31m[Kchar[m[K
+[01m[KOC1_tp3.cpp:[m[K In constructor ‘[01m[KMemory::Memory()[m[K’:
+[01m[KOC1_tp3.cpp:55:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kdata[m[K’ was not declared in this scope
+   55 |   [01;31m[Kdata[m[K = 0;
+      |   [01;31m[K^~~~[m[K
+[01m[KOC1_tp3.cpp:[m[K In member function ‘[01m[Kvoid Memory::write_back(int)[m[K’:
+[01m[KOC1_tp3.cpp:61:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kidx[m[K’ was not declared in this scope
+   61 |  int t = cache[[01;31m[Kidx[m[K].tag;
+      |                [01;31m[K^~~[m[K
+[01m[KOC1_tp3.cpp:[m[K At global scope:
+[01m[KOC1_tp3.cpp:69:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid Memory::mem_search(int, int)[m[K’
+   69 | void [01;31m[KMemory[m[K::mem_search(int t, int i){
+      |      [01;31m[K^~~~~~[m[K
+[01m[KOC1_tp3.cpp:69:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid Memory::mem_search(int, int)[m[K’
+[01m[KOC1_tp3.cpp:34:8:[m[K [01;36m[Knote: [m[K‘[01m[Kstruct Memory[m[K’ defined here
+   34 | struct [01;36m[KMemory[m[K{
+      |        [01;36m[K^~~~~~[m[K
+[01m[KOC1_tp3.cpp:[m[K In member function ‘[01m[Kvoid Memory::write(int, int, int, std::string)[m[K’:
+[01m[KOC1_tp3.cpp:80:50:[m[K [01;31m[Kerror: [m[K‘[01m[Ktag[m[K’ was not declared in this scope; did you mean ‘[01m[Ktan[m[K’?
+   80 |  if(this->cache[idx].v == false || cache[idx] != [01;31m[Ktag[m[K){ //buscar valor na memoria;
+      |                                                  [01;31m[K^~~[m[K
+      |                                                  [32m[Ktan[m[K
+[01m[KOC1_tp3.cpp:81:17:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+   81 |   mem_search(tg,[01;31m[Kint[m[K idx);
+      |                 [01;31m[K^~~[m[K
+[01m[KOC1_tp3.cpp:81:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kmem_search[m[K’ was not declared in this scope; did you mean ‘[01m[Kbsearch[m[K’?
+   81 |   [01;31m[Kmem_search[m[K(tg,int idx);
+      |   [01;31m[K^~~~~~~~~~[m[K
+      |   [32m[Kbsearch[m[K
+[01m[KOC1_tp3.cpp:83:28:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around assignment used as truth value [[01;35m[K-Wparentheses[m[K]
+   83 |  if([01;35m[Kthis->cache[idx].dirty = true[m[K){ //atualizar valor na memoria antes de escrever;
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[01m[KOC1_tp3.cpp:87:21:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} to ‘[01m[Kint[m[K’ in assignment
+   87 |  cache[idx].word0 = [01;31m[Kdata[m[K;
+      |                     [01;31m[K^~~~[m[K
+      |                     [01;31m[K|[m[K
+      |                     [01;31m[Kstd::string {aka std::__cxx11::basic_string<char>}[m[K
+[01m[KOC1_tp3.cpp:[m[K At global scope:
+[01m[KOC1_tp3.cpp:90:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kbool Memory::read(int, int, int, int&)[m[K’
+   90 | bool [01;31m[KMemory[m[K::read(int tg, int idx, int off, int& val){
+      |      [01;31m[K^~~~~~[m[K
+[01m[KOC1_tp3.cpp:43:7:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kbool Memory::read(int, int, int, int, int&)[m[K’
+   43 |  bool [01;36m[Kread[m[K(int,int,int,int,int&);
+      |       [01;36m[K^~~~[m[K
+[01m[KOC1_tp3.cpp:34:8:[m[K [01;36m[Knote: [m[K‘[01m[Kstruct Memory[m[K’ defined here
+   34 | struct [01;36m[KMemory[m[K{
+      |        [01;36m[K^~~~~~[m[K
+[01m[KOC1_tp3.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[KOC1_tp3.cpp:132:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct instructions[m[K’ has no member named ‘[01m[Ksrt[m[K’; did you mean ‘[01m[Kstr[m[K’?
+  132 |    inst.[01;31m[Ksrt[m[K = 'W';
+      |         [01;31m[K^~~[m[K
+      |         [32m[Kstr[m[K
+[01m[KOC1_tp3.cpp:134:38:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KMemory::read(int&, int&, int&, int&)[m[K’
+  134 |    if(mem.read(tag,index,offset,value[01;31m[K)[m[K){
+      |                                      [01;31m[K^[m[K
+[01m[KOC1_tp3.cpp:43:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool Memory::read(int, int, int, int, int&)[m[K’
+   43 |  bool [01;36m[Kread[m[K(int,int,int,int,int&);
+      |       [01;36m[K^~~~[m[K
+[01m[KOC1_tp3.cpp:43:7:[m[K [01;36m[Knote: [m[K  candidate expects 5 arguments, 4 provided
+[01m[KOC1_tp3.cpp:135:16:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K4737364[m[K’ to ‘[01m[K'T'[m[K’ [[01;35m[K-Woverflow[m[K]
+  135 |     inst.str = [01;35m[K'HIT'[m[K;
+      |                [01;35m[K^~~~~[m[K
+[01m[KOC1_tp3.cpp:137:16:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K1296651091[m[K’ to ‘[01m[K'S'[m[K’ [[01;35m[K-Woverflow[m[K]
+  137 |     inst.str = [01;35m[K'MISS'[m[K;
+      |                [01;35m[K^~~~~~[m[K
+[01m[KOC1_tp3.cpp:143:25:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kstd::__cxx11::list<instructions>::insert(instructions&)[m[K’
+  143 |   input_data.insert(inst[01;31m[K)[m[K;
+      |                         [01;31m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/list:64[m[K,
+                 from [01m[KOC1_tp3.cpp:5[m[K:
+[01m[K/usr/include/c++/9/bits/list.tcc:101:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::__cxx11::list<_Tp, _Alloc>::iterator std::__cxx11::list<_Tp, _Alloc>::insert(std::__cxx11::list<_Tp, _Alloc>::const_iterator, const value_type&) [with _Tp = instructions; _Alloc = std::allocator<instructions>; std::__cxx11::list<_Tp, _Alloc>::iterator = std::_List_iterator<instructions>; std::__cxx11::list<_Tp, _Alloc>::const_iterator = std::_List_const_iterator<instructions>; std::__cxx11::list<_Tp, _Alloc>::value_type = instructions][m[K’
+  101 |     [01;36m[Klist<_Tp, _Alloc>[m[K::
+      |     [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/list.tcc:101:5:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+In file included from [01m[K/usr/include/c++/9/list:63[m[K,
+                 from [01m[KOC1_tp3.cpp:5[m[K:
+[01m[K/usr/include/c++/9/bits/stl_list.h:1304:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::__cxx11::list<_Tp, _Alloc>::iterator std::__cxx11::list<_Tp, _Alloc>::insert(std::__cxx11::list<_Tp, _Alloc>::const_iterator, std::__cxx11::list<_Tp, _Alloc>::value_type&&) [with _Tp = instructions; _Alloc = std::allocator<instructions>; std::__cxx11::list<_Tp, _Alloc>::iterator = std::_List_iterator<instructions>; std::__cxx11::list<_Tp, _Alloc>::const_iterator = std::_List_const_iterator<instructions>; std::__cxx11::list<_Tp, _Alloc>::value_type = instructions][m[K’
+ 1304 |       [01;36m[Kinsert[m[K(const_iterator __position, value_type&& __x)
+      |       [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_list.h:1304:7:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[01m[K/usr/include/c++/9/bits/stl_list.h:1323:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::__cxx11::list<_Tp, _Alloc>::iterator std::__cxx11::list<_Tp, _Alloc>::insert(std::__cxx11::list<_Tp, _Alloc>::const_iterator, std::initializer_list<_Tp>) [with _Tp = instructions; _Alloc = std::allocator<instructions>; std::__cxx11::list<_Tp, _Alloc>::iterator = std::_List_iterator<instructions>; std::__cxx11::list<_Tp, _Alloc>::const_iterator = std::_List_const_iterator<instructions>][m[K’
+ 1323 |       [01;36m[Kinsert[m[K(const_iterator __p, initializer_list<value_type> __l)
+      |       [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_list.h:1323:7:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+In file included from [01m[K/usr/include/c++/9/list:64[m[K,
+                 from [01m[KOC1_tp3.cpp:5[m[K:
+[01m[K/usr/include/c++/9/bits/list.tcc:117:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::__cxx11::list<_Tp, _Alloc>::iterator std::__cxx11::list<_Tp, _Alloc>::insert(std::__cxx11::list<_Tp, _Alloc>::const_iterator, std::__cxx11::list<_Tp, _Alloc>::size_type, const value_type&) [with _Tp = instructions; _Alloc = std::allocator<instructions>; std::__cxx11::list<_Tp, _Alloc>::iterator = std::_List_iterator<instructions>; std::__cxx11::list<_Tp, _Alloc>::const_iterator = std::_List_const_iterator<instructions>; std::__cxx11::list<_Tp, _Alloc>::size_type = long unsigned int; std::__cxx11::list<_Tp, _Alloc>::value_type = instructions][m[K’
+  117 |     [01;36m[Klist<_Tp, _Alloc>[m[K::
+      |     [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/list.tcc:117:5:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
+In file included from [01m[K/usr/include/c++/9/list:63[m[K,
+                 from [01m[KOC1_tp3.cpp:5[m[K:
+[01m[K/usr/include/c++/9/bits/stl_list.h:1384:2:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _InputIterator, class> std::__cxx11::list<_Tp, _Alloc>::iterator std::__cxx11::list<_Tp, _Alloc>::insert(std::__cxx11::list<_Tp, _Alloc>::const_iterator, _InputIterator, _InputIterator) [with _InputIterator = _InputIterator; <template-parameter-2-2> = <template-parameter-1-2>; _Tp = instructions; _Alloc = std::allocator<instructions>][m[K’
+ 1384 |  [01;36m[Kinsert[m[K(const_iterator __position, _InputIterator __first,
+      |  [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_list.h:1384:2:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution fai
