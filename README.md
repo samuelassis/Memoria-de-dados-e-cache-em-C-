@@ -1,2 +1,2 @@
-# Memoria-de-dados-e-cache-em-C++-
-Implementação de trabalho prático da Disciplina Organixação de Computadores I
+# Memoria de Dados e Cache em C++
+Implementação de trabalho prático da Disciplina Organização de Computadores I
