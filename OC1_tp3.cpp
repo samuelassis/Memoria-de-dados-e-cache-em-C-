@@ -37,17 +37,8 @@ struct Memory{
 	bool read(int,int,int,int&);
 	void mem_search(int, int);
 	void write_back(int);
-	// void print_cache();
 };
-/*
-void Memory::print_cache(){
-	cout<<"CACHE: \n";
-	for(int i=0; i<64;i++){
-		cout<<"{"<<i<<"}"<<" (V: "<<cache[i].v<<" Dy: "<<cache[i].dirty<<" T: "<<cache[i].tag<<" ";
-		cout<<"-> "<<cache[i].word0<<" "<<cache[i].word1<<" "<<cache[i].word2<<" "<<cache[i].word3<<")"<<endl;
-	}
-}
-*/
+
 Memory::Memory(){
 	hits = misses = reads = writes = 0;
 	for(int i = 0; i<256;i++){
@@ -127,11 +118,9 @@ int main(){
 	bool hit;
 	while(scanf("%d %d", &address,&op_bit) != EOF){
 		bin_address = bitset<32>(address).to_string();
-		//cout<<"adress"<<"bin_adress = "<<bin_adress<<endl;
-		tag = (int) (bitset<22>(bin_address.substr(0,21)).to_ulong());    // 22 bits tag
-		index = (int) (bitset<6>(bin_address.substr(22,27)).to_ulong());  // 6  bits indice
-		offset = (int) (bitset<4>(bin_address.substr(28,31)).to_ulong()); // 4  bits offset
-		// cout<<"{"<<count<<"}\n"<<"tag = "<<tag<<"\nidx = "<<index<<"\noffset = "<<offset<<endl;
+		tag = (int) (bitset<22>(bin_address.substr(0,22)).to_ulong());    // 22 bits tag
+		index = (int) (bitset<6>(bin_address.substr(22,6)).to_ulong());  // 6  bits indice
+		offset = (int) (bitset<4>(bin_address.substr(28,4)).to_ulong()); // 4  bits offset
 		if(op_bit){
 			getline(cin,writing_data);
 			d = stoi(writing_data,0,2);
@@ -172,7 +161,6 @@ int main(){
 			if((*it).op){ out_file<<(*it).data<<" ";}
 			out_file<<(*it).str<<endl;
 		}
-		// mem.print_cache();
 		out_file.close();
 
 	return 0;
